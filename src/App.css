@@ -1,0 +1,265 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Layout header/nav */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: inherit;
+  border-bottom: none;
+  backdrop-filter: none;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header a {
+  color: inherit;
+}
+
+/* nav links keep default style without hover underline */
+
+/* Uniformiser la taille du nom et des liens de nav */
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+header nav a {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #root {
+    padding: 0 1.25rem 1.25rem;
+  }
+  header {
+    padding: 1.25rem 0;
+  }
+  header h1,
+  header nav a {
+    font-size: 1.125rem;
+  }
+  header nav ul {
+    gap: 0.875rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0 3rem;
+  gap: 1rem;
+}
+
+.hero-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 9999px;
+  background: radial-gradient(100% 100% at 30% 30%, #61dafb33 0%, #646cff33 60%, transparent 100%);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25), inset 0 0 20px rgba(100,108,255,0.25);
+}
+
+.hero-name {
+  font-size: 2rem;
+  margin: 0.25rem 0 0;
+}
+
+.hero-tagline {
+  margin: 0.25rem 0 0.75rem;
+  color: inherit;
+  opacity: 0.8;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Home bio */
+.home-bio {
+  max-width: 800px;
+  margin: 1rem auto 0;
+  text-align: center;
+  line-height: 1.8;
+  color: inherit;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.home-bio h3 {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+}
+
+.home-bio h3::before,
+.home-bio h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 48px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
+}
+
+.home-bio h3::before {
+  right: calc(100% + 12px);
+}
+
+.home-bio h3::after {
+  left: calc(100% + 12px);
+}
+
+.home-bio p {
+  margin: 0.5rem auto;
+  max-width: 65ch;
+}
+
+.home-bio strong {
+  color: #747bff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+  background: transparent;
+  transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.btn:hover {
+  border-color: #646cff;
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem 0 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: inherit;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 0;
+  }
+  .hero-photo {
+    width: 160px;
+    height: 160px;
+  }
+  .hero-name {
+    font-size: 1.75rem;
+  }
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+  }
+  .btn {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0;
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header h1,
+  header nav a {
+    font-size: 1rem;
+  }
+  header nav ul {
+    gap: 0.75rem;
+  }
+}
