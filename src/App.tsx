@@ -1,12 +1,47 @@
 import { Link, Route, Routes } from 'react-router-dom'
+import { useRef, type MouseEvent as ReactMouseEvent } from 'react'
 import './App.css'
 import ProjectsPage from './pages/Projects'
 import ProjectDetailPage from './pages/ProjectDetail'
 import AboutPage from './pages/About'
 import CVPage from './pages/CV'
 import ContactPage from './pages/Contact'
+import ProfileImage from './assets/Image.jpg'
 
 function App() {
+  const bioSectionRef = useRef<HTMLElement | null>(null)
+  const lastDustSpawnTimeRef = useRef(0)
+
+  const handleBioMouseMove = (e: ReactMouseEvent<HTMLElement>) => {
+    const target = e.currentTarget as HTMLElement
+    const rect = target.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    target.style.setProperty('--mx', `${x}px`)
+    target.style.setProperty('--my', `${y}px`)
+
+    const now = performance.now()
+    if (now - lastDustSpawnTimeRef.current < 40) return
+    lastDustSpawnTimeRef.current = now
+
+    const dust = document.createElement('span')
+    dust.className = 'dust'
+    const size = 4 + Math.random() * 6
+    dust.style.width = `${size}px`
+    dust.style.height = `${size}px`
+    dust.style.left = `${x - size / 2}px`
+    dust.style.top = `${y - size / 2}px`
+    const angle = Math.random() * Math.PI * 2
+    const distance = 12 + Math.random() * 18
+    const tx = Math.cos(angle) * distance
+    const ty = Math.sin(angle) * distance
+    dust.style.setProperty('--tx', `${tx}px`)
+    dust.style.setProperty('--ty', `${ty}px`)
+    target.appendChild(dust)
+    window.setTimeout(() => {
+      dust.remove()
+    }, 700)
+  }
   return (
     <>
       <header>
@@ -28,11 +63,14 @@ function App() {
             element={(
               <>
                 <section className="hero">
-                  <div className="hero-photo" aria-label="Photo de profil" />
+                  <img src={ProfileImage} alt="Photo de profil d'Aziz AVERIBOU" className="hero-photo" />
                   <h2 className="hero-name">Aziz AVERIBOU</h2>
-
                 </section>
-                <section className="home-bio">
+                <section
+                  ref={bioSectionRef}
+                  className="home-bio"
+                  onMouseMove={handleBioMouseMove}
+                >
                   <p>
                     Je m’appelle <strong>Weni Aristide Abdoul Aziz AVERIBOU</strong>, étudiant en informatique à
                     l’Université du Québec à Rimouski (UQAR), actuellement en cinquième session et en fin de formation.
