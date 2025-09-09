@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import { useRef, type MouseEvent as ReactMouseEvent } from 'react'
 import './App.css'
 import ProjectsPage from './pages/Projects'
@@ -9,6 +9,7 @@ import ContactPage from './pages/Contact'
 import ProfileImage from './assets/Image.jpg'
 
 function App() {
+  const location = useLocation()
   const bioSectionRef = useRef<HTMLElement | null>(null)
   const lastDustSpawnTimeRef = useRef(0)
 
@@ -45,16 +46,20 @@ function App() {
   return (
     <>
       <header>
-        <h1>Aziz AVERIBOU</h1>
-        <nav>
-          <ul>
-            <li><Link to="/">Accueil</Link></li>
-            <li><Link to="/projects">Projets</Link></li>
-            <li><Link to="/about">À propos</Link></li>
-            <li><Link to="/cv">CV</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
+        <div className="header-left">
+          <h1>Aziz AVERIBOU</h1>
+        </div>
+        <div className="header-right">
+          <nav>
+            <ul>
+              <li><Link to="/" className={location.pathname === "/" ? "active" : ""}>Accueil</Link></li>
+              <li><Link to="/projects" className={location.pathname === "/projects" ? "active" : ""}>Projets</Link></li>
+              <li><Link to="/about" className={location.pathname === "/about" ? "active" : ""}>À propos</Link></li>
+              <li><Link to="/cv" className={location.pathname === "/cv" ? "active" : ""}>CV</Link></li>
+              <li><Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact</Link></li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <main>
         <Routes>
