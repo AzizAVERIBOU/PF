@@ -7,6 +7,7 @@ import AboutPage from './pages/About'
 import CVPage from './pages/CV'
 import ContactPage from './pages/Contact'
 import ProfileImage from './assets/Image.jpg'
+import CodeBackground from './components/CodeBackground'
 
 function App() {
   const location = useLocation()
@@ -45,6 +46,7 @@ function App() {
   }
   return (
     <>
+      <CodeBackground />
       <header>
         <div className="header-left">
           <h1>Aziz AVERIBOU</h1>
