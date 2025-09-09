@@ -3,7 +3,11 @@ export default function CVPage() {
     <div className="container py-4">
       <div className="row">
         <div className="col-12">
-          <h1 className="display-5 text-center mb-4">Curriculum Vitae</h1>
+          <h1 className="display-4 text-center mb-4 fw-bold" style={{color: '#3b82f6', textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+            <span className="border-bottom border-3 pb-2 d-inline-block" style={{borderColor: '#3b82f6'}}>
+              Curriculum Vitae
+            </span>
+          </h1>
           <div className="text-center mb-5">
             <a 
               href="/Fichier.CV.pdf" 
@@ -19,41 +23,41 @@ export default function CVPage() {
 
       <div className="row">
         <div className="col-12">
-          <h2 className="mb-4 fw-bold text-center text-primary">
-            <span className="border-bottom border-3 border-primary pb-2 d-inline-block">Formation</span>
+          <h2 className="mb-4 fw-bold text-center" style={{color: '#7c3aed'}}>
+            <span className="border-bottom border-3 pb-2 d-inline-block" style={{borderColor: '#7c3aed'}}>Formation</span>
           </h2>
         </div>
       </div>
 
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-6">
-          <div className="card mb-2">
+          <div className="card mb-2 cv-card">
             <div className="card-body py-2">
-              <h6 className="card-title mb-1">Baccalauréat en Informatique</h6>
+              <h5 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1.1rem'}}>Baccalauréat en Informatique</h5>
               <small className="text-muted d-block mb-1">2023 – en cours</small>
               <small className="text-muted">Université du Québec à Rimouski, Campus de Lévis, Lévis</small>
             </div>
           </div>
 
-          <div className="card mb-2">
+          <div className="card mb-2 cv-card">
             <div className="card-body py-2">
-              <h6 className="card-title mb-1">Classe Préparatoire d'Entrée dans les Grandes Écoles</h6>
+              <h5 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1.1rem'}}>Classe Préparatoire d'Entrée dans les Grandes Écoles</h5>
               <small className="text-muted d-block mb-1">2021 – 2023</small>
               <small className="text-muted">Ministère de l'Éducation, Ouagadougou, Burkina Faso</small>
             </div>
           </div>
 
-          <div className="card mb-2">
+          <div className="card mb-2 cv-card">
             <div className="card-body py-2">
-              <h6 className="card-title mb-1">Diplôme d'Étude Collégiale en Mathématiques et Sciences de la Vie et de la Terre</h6>
+              <h5 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1.1rem'}}>Diplôme d'Étude Collégiale en Mathématiques et Sciences de la Vie et de la Terre</h5>
               <small className="text-muted d-block mb-1">2018 – 2021</small>
               <small className="text-muted">Collège Privé Moderne de Toussiana, Toussiana, Burkina Faso</small>
             </div>
           </div>
 
-          <div className="card mb-2">
+          <div className="card mb-2 cv-card">
             <div className="card-body py-2">
-              <h6 className="card-title mb-1">Brevet d'Étude Collégiale</h6>
+              <h5 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1.1rem'}}>Brevet d'Étude Collégiale</h5>
               <small className="text-muted d-block mb-1">2013 – 2018</small>
               <small className="text-muted">Collège Lassallien de Kongoussi, Kongoussi, Burkina Faso (2021)</small>
             </div>
@@ -63,8 +67,8 @@ export default function CVPage() {
 
       <div className="row">
         <div className="col-12">
-          <h2 className="mb-4 fw-bold text-center text-primary">
-            <span className="border-bottom border-3 border-primary pb-2 d-inline-block">Compétences</span>
+          <h2 className="mb-4 fw-bold text-center" style={{color: '#7c3aed'}}>
+            <span className="border-bottom border-3 pb-2 d-inline-block" style={{borderColor: '#7c3aed'}}>Compétences</span>
           </h2>
         </div>
       </div>
@@ -73,73 +77,73 @@ export default function CVPage() {
         <div className="col-12">
           <div className="row">
             <div className="col-md-6 col-lg-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 skill-card">
                 <div className="card-body py-2">
-                  <h6 className="card-title mb-1">Linguistiques</h6>
+                  <h6 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1rem'}}>Linguistiques</h6>
                   <small className="text-muted">Français (avancé), Anglais (intermédiaire-équivalent à 10/20)</small>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 skill-card">
                 <div className="card-body py-2">
-                  <h6 className="card-title mb-1">Bureautiques</h6>
+                  <h6 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1rem'}}>Bureautiques</h6>
                   <small className="text-muted">Word, Excel, OneDrive</small>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 skill-card">
                 <div className="card-body py-2">
-                  <h6 className="card-title mb-1">Développement logiciel</h6>
+                  <h6 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1rem'}}>Développement logiciel</h6>
                   <small className="text-muted">C#, Python, Java Script, PHP, Django, React JS, Assembleur (ASM)</small>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 skill-card">
                 <div className="card-body py-2">
-                  <h6 className="card-title mb-1">Bases de données</h6>
+                  <h6 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1rem'}}>Bases de données</h6>
                   <small className="text-muted">MySQL, SQL Server (intégré à Visual Studio)</small>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 skill-card">
                 <div className="card-body py-2">
-                  <h6 className="card-title mb-1">Outils et environnements de développement</h6>
+                  <h6 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1rem'}}>Outils et environnements de développement</h6>
                   <small className="text-muted">Visual Studio, Visual Studio Code, Eclipse, GitHub, Git</small>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 skill-card">
                 <div className="card-body py-2">
-                  <h6 className="card-title mb-1">Technologies Cloud</h6>
-                  <small className="text-muted">Intégration avec des plateformes Cloud</small>
+                  <h6 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1rem'}}>Technologies Cloud</h6>
+                  <small className="text-muted">Intégration avec des plateformes Cloud, Azure, Vercel</small>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 skill-card">
                 <div className="card-body py-2">
-                  <h6 className="card-title mb-1">Outils multimédia</h6>
+                  <h6 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1rem'}}>Outils multimédia</h6>
                   <small className="text-muted">OBS Studio</small>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 skill-card">
                 <div className="card-body py-2">
-                  <h6 className="card-title mb-1">Outils d'apprentissage en ligne</h6>
-                  <small className="text-muted">Moodle</small>
+                  <h6 className="card-title mb-1 fw-bold" style={{color: '#3b82f6', fontSize: '1rem'}}>Outils d'apprentissage en ligne</h6>
+                  <small className="text-muted">Moodle, openclassrooms, Coursera, Udemy</small>
                 </div>
               </div>
             </div>
@@ -149,17 +153,17 @@ export default function CVPage() {
 
       <div className="row">
         <div className="col-12">
-          <h2 className="mb-4 fw-bold text-center text-primary">
-            <span className="border-bottom border-3 border-primary pb-2 d-inline-block">Expérience Professionnelle</span>
+          <h2 className="mb-4 fw-bold text-center" style={{color: '#7c3aed'}}>
+            <span className="border-bottom border-3 pb-2 d-inline-block" style={{borderColor: '#7c3aed'}}>Expérience Professionnelle</span>
           </h2>
         </div>
       </div>
 
       <div className="row justify-content-center">
         <div className="col-md-10 col-lg-8">
-          <div className="card mb-3">
+          <div className="card mb-3 experience-card">
             <div className="card-body">
-              <h5 className="card-title">CISSS Chaudière Appalache</h5>
+              <h5 className="card-title fw-bold" style={{color: '#3b82f6', fontSize: '1.2rem'}}>CISSS Chaudière Appalache</h5>
               <h6 className="card-subtitle mb-2 text-muted">Intervenant(e) en Soutien et Sécurité / Agent(e) d'intervention</h6>
               <p className="text-muted mb-3">07/2024 – en cours</p>
               <ul className="mb-0">
@@ -173,9 +177,9 @@ export default function CVPage() {
             </div>
           </div>
 
-          <div className="card mb-3">
+          <div className="card mb-3 experience-card">
             <div className="card-body">
-              <h5 className="card-title">TEKNION</h5>
+              <h5 className="card-title fw-bold" style={{color: '#3b82f6', fontSize: '1.2rem'}}>TEKNION</h5>
               <h6 className="card-subtitle mb-2 text-muted">Agent de production et de conditionnement</h6>
               <p className="text-muted mb-3">05/2024 – 08/2024 | Saint Romuald, Lévis, QC</p>
               <ul className="mb-0">
@@ -188,9 +192,9 @@ export default function CVPage() {
             </div>
           </div>
 
-          <div className="card mb-3">
+          <div className="card mb-3 experience-card">
             <div className="card-body">
-              <h5 className="card-title">MAXI (Service à la Clientèle)</h5>
+              <h5 className="card-title fw-bold" style={{color: '#3b82f6', fontSize: '1.2rem'}}>MAXI (Service à la Clientèle)</h5>
               <h6 className="card-subtitle mb-2 text-muted">Caissier</h6>
               <p className="text-muted mb-3">09/2023 – 05/2024 | Lévis, QC (rue : président Kennedy)</p>
               <ul className="mb-0">
@@ -202,9 +206,9 @@ export default function CVPage() {
             </div>
           </div>
 
-          <div className="card mb-3">
+          <div className="card mb-3 experience-card">
             <div className="card-body">
-              <h5 className="card-title">DYLANE SERVICE</h5>
+              <h5 className="card-title fw-bold" style={{color: '#3b82f6', fontSize: '1.2rem'}}>DYLANE SERVICE</h5>
               <h6 className="card-subtitle mb-2 text-muted">Commis d'entrepôt</h6>
               <p className="text-muted mb-3">07/2019-09/2022 | Ouagadougou, Burkina-Faso (Ouaga 2000)</p>
               <ul className="mb-0">
@@ -219,39 +223,39 @@ export default function CVPage() {
 
       <div className="row">
         <div className="col-12">
-          <h2 className="mb-4 fw-bold text-center text-primary">
-            <span className="border-bottom border-3 border-primary pb-2 d-inline-block">Qualités Personnelles</span>
+          <h2 className="mb-4 fw-bold text-center" style={{color: '#7c3aed'}}>
+            <span className="border-bottom border-3 pb-2 d-inline-block" style={{borderColor: '#7c3aed'}}>Qualités Personnelles</span>
           </h2>
         </div>
       </div>
 
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-6">
-          <div className="card">
+          <div className="card cv-card">
             <div className="card-body">
               <ul className="mb-0 list-unstyled">
                 <li className="mb-2">
-                  <i className="fas fa-check-circle text-primary me-2"></i>
+                  <i className="fas fa-check-circle me-2" style={{color: '#7c3aed'}}></i>
                   Sens de l'organisation
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-check-circle text-primary me-2"></i>
+                  <i className="fas fa-check-circle me-2" style={{color: '#7c3aed'}}></i>
                   Courtoisie et loyauté
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-check-circle text-primary me-2"></i>
+                  <i className="fas fa-check-circle me-2" style={{color: '#7c3aed'}}></i>
                   Aptitude au travail en équipe
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-check-circle text-primary me-2"></i>
+                  <i className="fas fa-check-circle me-2" style={{color: '#7c3aed'}}></i>
                   Patience
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-check-circle text-primary me-2"></i>
+                  <i className="fas fa-check-circle me-2" style={{color: '#7c3aed'}}></i>
                   Adaptabilité
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-check-circle text-primary me-2"></i>
+                  <i className="fas fa-check-circle me-2" style={{color: '#7c3aed'}}></i>
                   Engagement envers l'excellence
                 </li>
               </ul>
@@ -262,35 +266,35 @@ export default function CVPage() {
 
       <div className="row">
         <div className="col-12">
-          <h2 className="mb-4 fw-bold text-center text-primary">
-            <span className="border-bottom border-3 border-primary pb-2 d-inline-block">Intérêts et Loisirs</span>
+          <h2 className="mb-4 fw-bold text-center" style={{color: '#7c3aed'}}>
+            <span className="border-bottom border-3 pb-2 d-inline-block" style={{borderColor: '#7c3aed'}}>Intérêts et Loisirs</span>
           </h2>
         </div>
       </div>
 
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-6">
-          <div className="card">
+          <div className="card cv-card">
             <div className="card-body">
               <ul className="mb-0 list-unstyled">
                 <li className="mb-2">
-                  <i className="fas fa-gamepad text-primary me-2"></i>
+                  <i className="fas fa-gamepad me-2" style={{color: '#7c3aed'}}></i>
                   Jeux vidéo et de stratégies
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-futbol text-primary me-2"></i>
+                  <i className="fas fa-futbol me-2" style={{color: '#7c3aed'}}></i>
                   Sports d'équipe : Soccer, Basketball
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-book text-primary me-2"></i>
+                  <i className="fas fa-book me-2" style={{color: '#7c3aed'}}></i>
                   Lecture de romans et de science-fiction
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-hiking text-primary me-2"></i>
+                  <i className="fas fa-hiking me-2" style={{color: '#7c3aed'}}></i>
                   Randonnée en plein air
                 </li>
                 <li className="mb-2">
-                  <i className="fas fa-language text-primary me-2"></i>
+                  <i className="fas fa-language me-2" style={{color: '#7c3aed'}}></i>
                   Apprentissage de nouvelles langues
                 </li>
               </ul>
